@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.set_page_config(
-   page_title="Settle Wise - Price Distribution",
+   page_title="Settle Wise - Area",
    page_icon="image.png",
    layout="wide",
    initial_sidebar_state="expanded",
 )
 
-st.title("Price Distribution")
+st.title("Price by Area")
 
 Housing = pd.read_csv("Housing.csv")
 
@@ -18,15 +18,15 @@ selected_area = st.session_state.get('selected_area', None)
 
 if(selected_area):
       st.subheader(selected_area)
-      st.markdown("###### (Hist Plot)")
+      st.markdown("###### (Scatter Plot)")
       Data_Selected_Area = Housing[Housing['Address'] == selected_area]
       
       plt.figure(figsize=(10,4))
       plt.clf() 
-      sns.histplot(Data_Selected_Area['Price'],bins = 40,color = 'skyblue')
-      plt.title('Price Distribution', fontsize=18)
-      plt.xlabel('Price (₹ crores)',fontsize=12)
-      plt.ylabel('House Availability',fontsize=12)
+      sns.scatterplot(data = Data_Selected_Area,x = 'Area', y = 'Price',color = 'green')
+      plt.title(f'Price Vs. Area in {selected_area}', fontsize=18)
+      plt.xlabel('Area (sq ft)')
+      plt.ylabel('Price (₹ crores)')
       st.pyplot(plt.gcf())
 else:
-    st.warning("Please select an area on the Home page first.")
+   st.warning("Please select an area on the Home page first.")

@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.set_page_config(
-   page_title="Settle Wise - Price vs Bedrooms/Bathrooms",
+   page_title="Settle Wise - Bedrooms_Bathrooms",
    page_icon="image.png",
    layout="wide",
    initial_sidebar_state="expanded",
 )
 
-st.title("Price vs. Bedrooms / Bathrooms")
+st.title("Price by Bedrooms / Bathrooms")
 
 Housing = pd.read_csv("Housing.csv")
 
@@ -24,7 +24,7 @@ if(selected_area):
     plt.figure(figsize=(10,4))
     plt.clf() 
     sns.boxplot(data = Data_Selected_Area,x = 'Bedroom', y = 'Price',palette='pastel')
-    plt.title('Price by Number of Bedrooms', fontsize=18)
+    plt.title(f'Price Vs. Number of Bedrooms in {selected_area}', fontsize=18)
     plt.xlabel('Number of Bedrooms')
     plt.ylabel('Price (₹ crores)')
     st.pyplot(plt.gcf())
@@ -36,7 +36,7 @@ if(selected_area):
     plt.figure(figsize=(10,4))
     plt.clf() 
     sns.boxplot(data = Data_Selected_Area,x = 'Bathroom', y = 'Price',palette='pastel')
-    plt.title('Price by Number of Bathrooms', fontsize=18)
+    plt.title(f'Price Vs. Number of Bathrooms in {selected_area}', fontsize=18)
     plt.xlabel('Number of Bathrooms')
     plt.ylabel('Price (₹ crores)')
     st.pyplot(plt.gcf())
