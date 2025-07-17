@@ -14,7 +14,7 @@ st.title("Price by Average AQI")
 
 
 Housing = pd.read_csv("Housing.csv")
-AQI = pd.read_csv("AQI.csv")
+AQI = pd.read_csv("Others.csv")
 
 selected_area = st.session_state.get('selected_area', None)
 

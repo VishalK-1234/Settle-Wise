@@ -15,19 +15,20 @@ st.header("1. Identifying the Socially Relevant Issue")
 st.markdown("""
 In a rapidly growing city like **Delhi NCR**, choosing the right locality to live in is a major challenge. People often struggle to find areas that match their preferences for **safety**, **affordability**, **air quality**, **connectivity**, and **lifestyle options**. This lack of clear, organized, and accessible information creates confusion, often leading people to make suboptimal or uninformed decisions about where to settle.
 
-This challenge is especially significant for people **new to the city** who may not have an established understanding of the different neighborhoods, making it hard to navigate and choose suitable localities.
+This challenge is particularly significant for real estate investors who need a quick yet comprehensive overview of various neighborhoods to make strategic decisions.
 
-**Settle Wise** aims to bridge this gap with data-driven insights to help all residents, particularly newcomers, make informed choices confidently.
+**Settle Wise** aims to bridge this gap with data-driven insights to help all residents, particularly real estate investors, make informed choices confidently.
 """)
 
 st.header("2. Understanding the Problem")
 st.markdown("""
 Many individuals and families relocating to or within Delhi NCR lack access to **consolidated information** about key factors such as:
-- **House Pricing Trends**
-- **Crime Rates**
+- **Property Pricing Trends**
+- **Safety and Crime Statistics**
 - **Air Quality (AQI)**
-- **Distance to Nearest Metro Stations**
-- **Availability of Restaurants and Lifestyle Amenities**
+- **Connectivity and Proximity to Metro Stations**
+- **Density of Lifestyle and Commercial Amenities**
+
 
 This absence of transparent, location-specific data hinders smart decision-making and quality of life.
 """)
@@ -37,8 +38,9 @@ st.header("3. Community Data Collection")
 st.markdown("""
 We collected a range of **community-contributed** and **publicly available datasets** across localities in Delhi NCR, including:
 
-- **Housing prices**, **Distance to metro stations**, **Crime data**, and **Restaurant availability** from datasets sourced from [Kaggle](https://www.kaggle.com).
-- **Air Quality Index (AQI)** data sourced from the reliable and up-to-date website [IQAir](https://www.iqair.com/).
+- **Housing prices**, **Distance to metro stations**, **Firestations**, **Schools**, **Hospitals** **Crime data**, and **Restaurant availability** from datasets sourced from [Kaggle](https://www.kaggle.com).
+- **Air Quality Index (AQI)** data sourced from the website [IQAir](https://www.iqair.com/).
+- **Reviews** data is sourced from [MagicBricks](https://www.magicbricks.com/), [Housing.com](https://www.housing.com/), and [Square Yards](https://www.squareyards.com/).
 
 We used **pandas** library extensively for cleaning and managing these datasets to ensure accurate and meaningful analysis.
 """)

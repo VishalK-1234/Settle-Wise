@@ -4,16 +4,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.set_page_config(
-   page_title="Settle Wise - Crime Incidents",
+   page_title="Settle Wise - Crimes",
    page_icon="image.png",
    layout="wide",
    initial_sidebar_state="expanded",
 )
 
-st.title("Price by Crime Incidents")
+st.title("Price by Number of Crime Incidents")
 
 Housing = pd.read_csv("Housing.csv")
-Crimes = pd.read_csv("Crimes.csv")
+Crimes = pd.read_csv("Others.csv")
 
 selected_area = st.session_state.get('selected_area', None)
 

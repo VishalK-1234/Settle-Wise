@@ -22,18 +22,10 @@ st.markdown("### Housing Dataset")
 Housing = pd.read_csv("Housing.csv")
 st.dataframe(Housing)
 
-st.markdown("### Metro Dataset")
-Metro = pd.read_csv("Metro.csv")
-st.dataframe(Metro)
-
-st.markdown("### Crimes Dataset")
-Crimes = pd.read_csv("Crimes.csv")
-st.dataframe(Crimes)
-
 st.markdown("### Restaurants Dataset")
 Restaurants = pd.read_csv("Restaurants.csv")
 st.dataframe(Restaurants)
 
-st.markdown("### AQI Dataset")
-AQI = pd.read_csv("AQI.csv")
-st.dataframe(AQI)
+st.markdown("### All Others Dataset")
+Others = pd.read_csv("Others.csv")
+st.dataframe(Others)
