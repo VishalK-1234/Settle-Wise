@@ -18,7 +18,7 @@ selected_area = st.session_state.get('selected_area', None)
 
 if(selected_area):
       st.subheader(selected_area)
-      st.markdown("###### (Hist Plot)")
+      st.markdown("###### (Histogram)")
       Data_Selected_Area = Housing[Housing['Address'] == selected_area]
       
       plt.figure(figsize=(10,4))

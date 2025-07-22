@@ -22,10 +22,8 @@ if selected_area:
     st.markdown("###### (Regression Plot)")
     area_data = Housing[Housing['Address'] == selected_area].reset_index(drop=True)
 
-    plt.figure(figsize=(10, 6))
-    sns.regplot(data=area_data, x='Building Age', y='Price', 
-            scatter_kws={'alpha':0.5}, 
-            line_kws={"color":"red"}) 
+    plt.figure(figsize=(10, 4))
+    sns.regplot(data=area_data, x='Building Age', y='Price', scatter_kws={'alpha':0.5}, line_kws={"color":"red"}) 
     plt.title('Price Vs. Building Age', fontsize=16)
     plt.xlabel('Age of Building (Years)')
     plt.ylabel('House Price (₹)')

@@ -31,7 +31,7 @@ if(selected_area):
     Housing_Area = Housing_Area.copy()
     Housing_Area['AQI'] = Total_AQI
 
-    fig, ax = plt.subplots(figsize=(10,6))
+    fig, ax = plt.subplots(figsize=(10,4))
     sns.scatterplot(data=Housing_Area, x='AQI', y='Price', color='crimson')
     ax.set_xlabel('Average AQI in Locality')
     ax.set_ylabel('House Price (₹)')

@@ -21,8 +21,8 @@ if selected_area:
     st.markdown("###### (Scatter Plot)")
     area_data = Housing[Housing['Address'] == selected_area].reset_index(drop=True)
 
-    plt.figure(figsize=(10, 6))
-    sns.scatterplot(data=area_data, x='Distance', y='Price')
+    plt.figure(figsize=(10, 4))
+    sns.scatterplot(data=area_data, x='Distance to Metro', y='Price')
     plt.title(f"Price Vs. Distance from Metro Station in {selected_area}", fontsize=18)
     plt.xlabel("Distance to Metro (km)")
     plt.ylabel("House Price (₹)")

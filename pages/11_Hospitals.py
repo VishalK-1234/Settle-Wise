@@ -30,7 +30,7 @@ if(selected_area):
     Housing_Area = Housing_Area.copy()
     Housing_Area['Hospitals'] = total_hospitals
 
-    fig, ax = plt.subplots(figsize=(10,6))
+    fig, ax = plt.subplots(figsize=(10,4))
     
     sns.boxplot(data=Housing_Area, x='Hospitals', y='Price', color='skyblue')
     

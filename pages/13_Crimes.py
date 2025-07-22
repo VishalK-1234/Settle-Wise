@@ -30,7 +30,7 @@ if(selected_area):
     Housing_Area = Housing_Area.copy()
     Housing_Area['Total Crimes'] = total_crimes
 
-    fig, ax = plt.subplots(figsize=(10,6))
+    fig, ax = plt.subplots(figsize=(10,4))
     sns.scatterplot(data=Housing_Area, x='Total Crimes', y='Price', color='crimson')
     ax.set_xlabel('Total Crimes in Locality')
     ax.set_ylabel('House Price (₹)')
